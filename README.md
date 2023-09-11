@@ -25,25 +25,34 @@ The training phase involves training a multi-task autoencoder model for image re
 Our approach to Open Set Recognition involves:
 
 Using a multi-task autoencoder for reconstruction and classification tasks.
+
 Estimating uncertainty by calculating the entropy of predictions.
+
 Monitoring reconstruction loss.
+
 Incorporating dropout layers and data augmentations for robustness.
 
 ### Baseline Results
 We evaluate the trained model's performance on the MNIST test set by calculating accuracy and recording predicted vs. true labels.
+
 Baseline accuracy for the base model: 95.93%
+
 Baseline accuracy for the OSR model: 95.71%
 
 ### OOD Results
 In Out-of-Distribution (OOD) results evaluation, we assess model performance on both MNIST and OOD datasets separately. We calculate binary classification accuracy for both categories and visualize a confusion matrix to analyze the model's performance.
+
 MNIST accuracy: 95.71%
+
 OOD accuracy: 90.80%
 
 
 ### OSR Results
 The OSR evaluation tests the model on data outside its training scope, including unseen classes and substantially different data. We measure Total Accuracy to evaluate the model's ability to distinguish between known and unknown samples.
+
 Total accuracy: 95.26%
 
 ### Final Results
 In the final test, the model was evaluated using an OOD dataset which was not accessible in any phase of training and testing.
+
 The final OSR Score: 97.71%
